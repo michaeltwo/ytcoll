@@ -469,7 +469,7 @@ def main():
         print("2. Create a new Project")
         print("3. enable 'YouTube Data API v3'")
         print("4. create credentials > API KEY")
-        print("5. copy API Key to API_KEY in .env file or in Main config")
+        print("5. copy API Key to API_KEY in .env file or in Main config YOUR_API_KEY_HERE")
         print("=" * 60)
         return
     
@@ -501,9 +501,9 @@ def main():
     }
     
     # data collection parameters
-    MAX_VIDEOS = 50  # maximum video to fetch
-    MAX_COMMENTS_PER_VIDEO = 100  # maximum comments per video
-    MAX_VIDEOS_FOR_COMMENTS = 20  # maximum videos to fetch comments from
+    MAX_VIDEOS = os.getenv('MAX_VIDEOS', '50')  # maximum video to fetch
+    MAX_COMMENTS_PER_VIDEO = os.getenv('MAX_COMMENTS_PER_VIDEO', '100')  # maximum comments per video
+    MAX_VIDEOS_FOR_COMMENTS = os.getenv('MAX_VIDEOS_FOR_COMMENTS', '20')  # maximum videos to fetch comments from
     
     # ===== 开始数据收集 =====
     print("=" * 60)

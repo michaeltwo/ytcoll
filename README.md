@@ -1,7 +1,7 @@
 # Youtube Meta Data Collection 
 
 ## Prerequisite
-python installed and pip packages installed by using below commaned
+Make sure Python is installed and  then use pip to install packages by using below commaned
 ```
  pip install -r requirements.txt
 ```
